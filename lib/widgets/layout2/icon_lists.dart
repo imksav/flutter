@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class IconLists extends StatelessWidget {
-  const IconLists({
-    Key? key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(

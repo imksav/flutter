@@ -1,4 +1,4 @@
-import 'package:firstapp/screens/layout_example2.dart';
+import 'package:firstapp/screens/layout2/layout_example2.dart';
 import 'package:flutter/material.dart';
 
 class LikeCommentShare extends StatelessWidget {
