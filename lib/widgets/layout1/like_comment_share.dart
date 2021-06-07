@@ -1,3 +1,4 @@
+import 'package:firstapp/screens/layout_example2.dart';
 import 'package:flutter/material.dart';
 
 class LikeCommentShare extends StatelessWidget {
@@ -24,10 +25,13 @@ class LikeCommentShare extends StatelessWidget {
                         // ignore: deprecated_member_use
                         FlatButton(
                           onPressed: () {
-                            Navigator.of(context).pop();
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LayoutExample2()));
                           },
                           child: Text(
-                            "Close X",
+                            "Layout Example 2",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 20.0),
                           ),

@@ -1,4 +1,4 @@
-import 'package:firstapp/screens/layout_decoration_screen.dart';
+import 'package:firstapp/screens/main/layout_decoration_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

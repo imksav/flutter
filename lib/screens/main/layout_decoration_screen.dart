@@ -1,5 +1,5 @@
-import 'package:firstapp/screens/layout_example1.dart';
-import 'package:firstapp/widgets/column_decoration.dart';
+import 'package:firstapp/screens/layout1/layout_example1.dart';
+import 'package:firstapp/widgets/main/column_decoration.dart';
 import 'package:flutter/material.dart';
 
 class LayoutDecorationScreen extends StatelessWidget {
