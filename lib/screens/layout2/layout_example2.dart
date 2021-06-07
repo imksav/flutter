@@ -1,3 +1,4 @@
+import 'package:firstapp/screens/layout3/grid_view_builder.dart';
 import 'package:firstapp/widgets/layout2/icon_lists.dart';
 import 'package:firstapp/widgets/layout2/ratings.dart';
 import 'package:flutter/material.dart';
@@ -48,12 +49,21 @@ class LayoutExample2 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                  child: Card(
-                    child: Image.asset(
-                      "assets/sikshyatechnology.jpg",
-                      width: 100,
-                      height: 100,
+                  child: GestureDetector(
+                    child: Card(
+                      child: Image.asset(
+                        "assets/sikshyatechnology.jpg",
+                        width: 100,
+                        height: 100,
+                      ),
                     ),
+                    onTap: () {
+                      print("Card Pressed");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GridViewBuilder()));
+                    },
                   ),
                 ),
               ],
