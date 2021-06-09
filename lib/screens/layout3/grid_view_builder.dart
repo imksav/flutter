@@ -1,4 +1,4 @@
-import 'package:firstapp/screens/layout3/grid_view_count.dart';
+import 'package:firstapp/screens/layout3/list_view.dart';
 import 'package:firstapp/screens/main/color_change_layout.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +55,7 @@ class GridViewBuilder extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => GridViewCount()));
+                    MaterialPageRoute(builder: (context) => ListViewLayout()));
               },
             );
           },
