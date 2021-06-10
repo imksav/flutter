@@ -1,3 +1,4 @@
+import 'package:firstapp/main.dart';
 import 'package:flutter/material.dart';
 
 class CustomWidgetItem extends StatelessWidget {
@@ -19,43 +20,46 @@ class CustomWidgetItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5.0),
-        child: Row(
-          children: [
-            Expanded(
-              child: thumbnail,
-              flex: 2,
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(10, 7, 5, 3),
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(title, style: _titleStyle),
-                        const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 5)),
-                        Text("By $user", style: _userStyle),
-                        const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 3)),
-                        Text("$count views"),
-                      ],
-                    ),
-                  ],
-                ),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: thumbnail,
+                flex: 1,
               ),
-              flex: 3,
-            ),
-            const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-            Icon(Icons.more_vert),
-          ],
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 7, 5, 3),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(title, style: _titleStyle),
+                          const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 5)),
+                          Text("By $user", style: _userStyle),
+                          const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 3)),
+                          Text("$count views"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                flex: 3,
+              ),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+              Icon(Icons.more_vert),
+            ],
+          ),
         ),
       ),
       onTap: () {
-        print("Pressed!!!");
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MyHomePage(title: title)));
       },
     );
   }
