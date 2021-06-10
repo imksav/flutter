@@ -1,3 +1,5 @@
+import 'package:firstapp/screens/project1/custom_widget_item.dart';
+import 'package:firstapp/screens/project1/project_one.dart';
 import 'package:firstapp/widgets/layout3/my_list_title.dart';
 import 'package:flutter/material.dart';
 
@@ -17,8 +19,8 @@ class ListTileLayout extends StatelessWidget {
                     content: Text("Be Alert Guys!!!"),
                     backgroundColor: Colors.red,
                   );
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => ListTileLayout()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProjectOne()));
                 },
                 icon: Icon(Icons.skip_next))
           ],
