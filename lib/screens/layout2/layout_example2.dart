@@ -1,6 +1,6 @@
 import 'package:firstapp/screens/layout3/grid_view_builder.dart';
-import 'package:firstapp/widgets/layout2/icon_lists.dart';
-import 'package:firstapp/widgets/layout2/ratings.dart';
+import 'package:firstapp/screens/layout2/icon_lists.dart';
+import 'package:firstapp/screens/layout2/ratings.dart';
 import 'package:flutter/material.dart';
 
 class LayoutExample2 extends StatelessWidget {

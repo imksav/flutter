@@ -1,4 +1,4 @@
-import 'package:firstapp/widgets/layout1/like_comment_share.dart';
+import 'package:firstapp/screens/layout1/like_comment_share.dart';
 import 'package:flutter/material.dart';
 
 class LayoutExample1 extends StatelessWidget {

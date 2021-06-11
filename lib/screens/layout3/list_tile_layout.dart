@@ -1,6 +1,6 @@
 import 'package:firstapp/screens/project1/custom_widget_item.dart';
 import 'package:firstapp/screens/project1/project_one.dart';
-import 'package:firstapp/widgets/layout3/my_list_title.dart';
+import 'package:firstapp/screens/layout3/my_list_title.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

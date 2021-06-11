@@ -1,3 +1,4 @@
+import 'package:firstapp/screens/silverappbarlayout/silver_app_bar_layout.dart';
 import 'package:flutter/material.dart';
 
 class CustomWidgetProjectTwo extends StatelessWidget {
@@ -29,48 +30,73 @@ class CustomWidgetProjectTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Card(
-        color: Colors.lime.shade800,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              Expanded(
-                child: thumbnail,
-                flex: 1,
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 10, 3, 5),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(title, style: _titleStyle),
-                      const Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 3)),
-                      Text(description, style: _descriptionStyle),
-                      const Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5)),
-                      Text(user, style: _userStyle),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(publishedDateTime,
-                              style: _publishedDateTimeStyle),
-                          SizedBox(width: 5),
-                          Text("$postTime", style: _publishedDateTimeStyle),
-                        ],
-                      ),
-                      ratingIcon,
-                    ],
-                  ),
+        child: Card(
+          color: Colors.lime.shade800,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: thumbnail,
+                  flex: 1,
                 ),
-                flex: 2,
-              )
-            ],
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 10, 3, 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(title, style: _titleStyle),
+                        const Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 3)),
+                        Text(description, style: _descriptionStyle),
+                        const Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 5)),
+                        Text(user, style: _userStyle),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(publishedDateTime,
+                                style: _publishedDateTimeStyle),
+                            SizedBox(width: 5),
+                            Text("$postTime", style: _publishedDateTimeStyle),
+                          ],
+                        ),
+                        ratingIcon,
+                      ],
+                    ),
+                  ),
+                  flex: 2,
+                )
+              ],
+            ),
           ),
         ),
-      ),
-    );
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => AlertDialog(
+                        title: Text(title),
+                        content: Text(description),
+                        actions: [
+                          IconButton(
+                              onPressed: () {
+                                print("Will Navigate!!!");
+                                AlertDialog(
+                                  title: Text("Alert!!!"),
+                                  content: Text("Be Alert Guys!!!"),
+                                  backgroundColor: Colors.red,
+                                );
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            SliverAppBarLayout()));
+                              },
+                              icon: Icon(Icons.skip_next))
+                        ],
+                      )));
+        });
   }
 }
