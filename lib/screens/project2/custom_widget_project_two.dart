@@ -1,4 +1,4 @@
-import 'package:firstapp/screens/silverappbarlayout/silver_app_bar_layout.dart';
+import 'package:firstapp/screens/sliverappbarlayout/silver_app_bar_layout.dart';
 import 'package:flutter/material.dart';
 
 class CustomWidgetProjectTwo extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:firstapp/screens/silverappbarlayout/card_sliver_list.dart';
+import 'package:firstapp/screens/sliverappbarlayout/card_sliver_list.dart';
 import 'package:flutter/material.dart';
 
 class SliverAppBarLayout extends StatelessWidget {
